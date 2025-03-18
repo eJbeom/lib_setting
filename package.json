@@ -1,0 +1,46 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev:demo": "vite -c ./vite.config.demo.ts --host",
+    "preview:demo": "vite -c ./vite.config.demo.ts preview",
+    "build:demo": "vite-ssg -c ./vite.config.demo.ts build",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "test:ci": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint --fix && echo Lint completed!",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vitest/coverage-v8": "^3.0.9",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "husky": "^8.0.0",
+    "jiti": "^2.4.2",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^6.2.2",
+    "vite-plugin-dts": "^4.5.3",
+    "vite-ssg": "^25.2.0",
+    "vitest": "^3.0.9",
+    "vue-tsc": "^2.2.8"
+  },
+  "lint-staged": {
+    "**/*.{js.ts.vue}": "eslint --fix"
+  }
+}
